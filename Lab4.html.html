@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veritas University Orientation Portal</title>
+</head>
+<body>
+
+    <h2>Student Orientation Registration Form</h2>
+
+    <form action="/submit_registration" method="POST" enctype="multipart/form-data">
+        
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <p>
+                <label for="fullName">Full Name:</label><br>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+            </p>
+
+            <p>
+                <label for="matricNumber">Matriculation Number:</label><br>
+                <input type="text" id="matricNumber" name="matricNumber" placeholder="e.g. VUG/SEN/..." required>
+            </p>
+
+            <p>
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" placeholder="student@example.com" required>
+            </p>
+
+            <p>
+                <label for="age">Age:</label><br>
+                <input type="number" id="age" name="age" min="16" max="100">
+            </p>
+
+            <p>
+                <label for="dob">Date of Birth:</label><br>
+                <input type="date" id="dob" name="dob" required>
+            </p>
+
+            <p>
+                <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Academic & Registration Details</legend>
+
+            <p>
+                <label for="faculty">Faculty:</label><br>
+                <select id="faculty" name="faculty">
+                    <option value="">--Select your Faculty--</option>
+                    <option value="natural_sciences">Natural and Applied Sciences</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="humanities">Humanities</option>
+                    <option value="social_sciences">Social Sciences</option>
+                    <option value="law">Law</option>
+                </select>
+            </p>
+
+            <p>
+                <label>Documents Brought for Registration:</label><br>
+                <input type="checkbox" id="admissionLetter" name="docs" value="admission_letter">
+                <label for="admissionLetter">Admission Letter</label><br>
+                
+                <input type="checkbox" id="birthCert" name="docs" value="birth_certificate">
+                <label for="birthCert">Birth Certificate</label><br>
+                
+                <input type="checkbox" id="waecResult" name="docs" value="waec_result">
+                <label for="waecResult">O'Level Result</label>
+            </p>
+
+            <p>
+                <label for="passport">Upload Passport Photograph:</label><br>
+                <input type="file" id="passport" name="passport" accept="image/*">
+            </p>
+
+            <p>
+                <label for="comments">Additional Comments or Questions:</label><br>
+                <textarea id="comments" name="comments" rows="4" cols="40" placeholder="Type your message here..."></textarea>
+            </p>
+        </fieldset>
+
+        <div style="margin-top: 20px;">
+            <input type="submit" value="Register Student">
+            <input type="reset" value="Clear Form">
+        </div>
+
+    </form>
+
+</body>
+</html>
